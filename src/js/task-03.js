@@ -18,39 +18,17 @@ const images = [
 
 const gallery = document.querySelector("#gallery");
 gallery.classList.add("gallery");
-// console.log(gallery);
 
-// const makeGalleryList = (images) => {
-//   return images.map((image) => {
-//     const galleryElement = document.createElement("li");
-//     galleryElement.classList.add("gallery-item");
-//     const galleryImage = document.createElement("img");
-//     galleryElement.appendChild(galleryImage);
-//     galleryImage.src = image.url;
-//     galleryImage.alt = image.alt;
+const makeGalleryItemMarkup = (image) => {
+  const { url, alt } = image;
+  return `
+  <li class="gallery-item">
+   <img src= ${url} alt= ${alt} ></img>
+  </li >`;
+};
 
-//     return galleryElement;
-//   });
-// };
+const makeGalleryMarkup = images.map(makeGalleryItemMarkup).join("");
 
-// const galleryList = makeGalleryList(images);
+// console.log(makeGalleryMarkup);
 
-// const galleryListIns = gallery.append(...galleryList);
-
-gallery.insertAdjacentHTML(
-  "afterbegin",
-  
-    return images.map((image) => {
-      const galleryElement = document.createElement("li");
-      galleryElement.classList.add("gallery-item");
-      const galleryImage = document.createElement("img");
-      galleryElement.appendChild(galleryImage);
-      galleryImage.src = image.url;
-      galleryImage.alt = image.alt;
-
-      return galleryElement;
-    });
-  
-);
-
-// console.log(galleryListIns);
+gallery.insertAdjacentHTML("beforeend", makeGalleryMarkup);
