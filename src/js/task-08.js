@@ -1,11 +1,19 @@
-const refs = {
-  input: document.querySelector("input"),
-  create: document.querySelector('button[data-action="render"]'),
-  clear: document.querySelector('button[data-action="destroy"]'),
-  boxes: document.querySelector("#boxes"),
-};
+const input = document.querySelector("input");
+const controls = document.querySelectorAll("#controls button");
+const create = controls[0];
+const clear = controls[1];
+// document.querySelector('button[data-action="destroy"]');
+const boxes = document.querySelector("#boxes");
 
-console.log(refs.input);
-console.log(refs.create);
-console.log(refs.clear);
-console.log(refs.boxes);
+console.log(input);
+console.log(controls);
+console.log(create);
+console.log(clear);
+console.log(boxes);
+
+const box = document.createElement("div");
+box.style.width = "30px";
+box.style.height = "30px";
+box.style.backgroundColor = "tomato";
+
+boxes.append(box);
