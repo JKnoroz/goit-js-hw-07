@@ -1,19 +1,14 @@
-const input = document.querySelector("input");
-const controls = document.querySelectorAll("#controls button");
-const create = controls[0];
-const clear = controls[1];
-// document.querySelector('button[data-action="destroy"]');
-const boxes = document.querySelector("#boxes");
+// const input = document.querySelector("input");
+// const controls = document.querySelectorAll("#controls button");
+// const create = document.querySelector('button[data-action="render"]');
+// const clear = controls[1];
+// // document.querySelector('button[data-action="destroy"]');
+// const boxesSection = document.querySelector("#boxes");
 
-console.log(input);
-console.log(controls);
-console.log(create);
-console.log(clear);
-console.log(boxes);
+// console.log(input);
+// console.log(controls);
+// console.log(create);
+// console.log(clear);
+// console.log(boxesSection);
 
-const box = document.createElement("div");
-box.style.width = "30px";
-box.style.height = "30px";
-box.style.backgroundColor = "tomato";
-
-boxes.append(box);
+// const makeDiv = document.createElement("div");
