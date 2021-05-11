@@ -11,6 +11,7 @@ input.addEventListener("input", insertInputValue);
 function insertInputValue(event) {
   if (input.value === "") {
     output.textContent = "незнакомец";
+  } else {
+    output.textContent = event.currentTarget.value;
   }
-  return (output.textContent = event.currentTarget.value);
 }
